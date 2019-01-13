@@ -10,8 +10,8 @@ pip install torch torchvision
     
 ## Usage
 The default setting is
-- batch size: 100
-- number of epochs: 20
+- batch size: 200
+- number of epochs: 100
 - GAN's type: DCGAN
 - dataset: MNIST
 
