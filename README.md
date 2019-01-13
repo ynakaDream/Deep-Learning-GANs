@@ -9,7 +9,13 @@ pip install torch torchvision
 ```
     
 ## Usage
-The default setting is implemented GCGAN for MNIST dataset. The command is as follows:
+The default setting is
+- batch size: 100
+- number of epochs: 20
+- gan's type: GAGAN
+- dataset: MNIST
+
+The command is as follows:
 ```bash
 python3 main.py
 ```
