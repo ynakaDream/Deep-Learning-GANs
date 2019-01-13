@@ -1,5 +1,5 @@
 # Deep-Learning-GANs
-Generative Adversarial Networks (GAN) and Deep Convolutional GAN (DCGAN) for MNIST and Cifar10 datasets
+The Python program using PyTorch for implementing Generative Adversarial Networks (GAN) and Deep Convolutional GAN (DCGAN) for MNIST and Cifar10 datasets
 
 ## Requirements
 - python3
