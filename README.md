@@ -3,9 +3,13 @@ Generative Adversarial Networks (GAN) and Deep Convolutional GAN (DCGAN) for MNI
 
 ## Requirements
 - python3
-- PyTorch(torch, torchvision)
-  - install with pip as follows:
+- pytorch and torchvision
 ```bash
 pip install torch torchvision
 ```
     
+## Usage
+  A default is implemented GCGAN for MNIST dataset. The command is as follows:
+```bash
+python3 main.py
+```
