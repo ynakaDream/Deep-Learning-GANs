@@ -26,7 +26,7 @@ python3 main.py -b 100 -e 20 -gt gan -d cifar10
 - -b: batch size
 - -e: number of epochs
 - -gt: gan type (gan or gcgan)
-- -d: dataset (mnist or cifar10)
+- -d: dataset (mnist, cifar10 and stl10)
 
 ## References
 - [Ian J. Goodfellow, et al, Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)
