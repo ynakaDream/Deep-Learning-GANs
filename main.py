@@ -1,8 +1,10 @@
 '''
     Generative Adversarial Network
 
-    version: 1.0.0
-    date: Jan/13/2019
+    version: 1.1.0
+
+    date: Jan/13/2019    version: 1.0.0
+          Jan/14/2019             1.1.0 deal with STL10 dataset
 '''
 
 import argparse
@@ -22,7 +24,7 @@ from utils.generators.GeneratorGAN import GeneratorGAN
 parser = argparse.ArgumentParser(add_help=True)
 parser.add_argument('-b', '--batch', help='batch size', type=int, default=100)
 parser.add_argument('-e', '--epoch', help='number of epochs', type=int, default=20)
-parser.add_argument('-d', '--dataset', help='select dataset: mnist, cifar10', type=str, default='mnist')
+parser.add_argument('-d', '--dataset', help='select dataset: mnist, cifar10, stl10', type=str, default='mnist')
 parser.add_argument('-gt', '--gantype', help='select gan type: gcgan, gan', type=str, default='gcgan')
 parser.add_argument('-ngf', type=int, default=64)
 parser.add_argument('-ndf', type=int, default=64)
@@ -40,7 +42,7 @@ SAVE_DIR = BASE_DIR + DATA_SET + '_' + GAN_TYPE
 
 os.makedirs(SAVE_DIR, exist_ok=True)
 
-if args.dataset == 'cifar10':
+if args.dataset == 'cifar10' or 'stl10':
     CHANNEL_SIZE = 3
 
 netD = DiscriminatorDCGAN(CHANNEL_SIZE, NDF)
