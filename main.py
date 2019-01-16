@@ -1,10 +1,11 @@
 '''
     Generative Adversarial Network
 
-    version: 1.1.0
+    version: 1.1.1
 
     date: Jan/13/2019    version: 1.0.0
           Jan/14/2019             1.1.0 deal with STL10 dataset
+          Jan/16/2019             1.1.1 bug fix
 '''
 
 import argparse
@@ -42,7 +43,7 @@ SAVE_DIR = BASE_DIR + DATA_SET + '_' + GAN_TYPE
 
 os.makedirs(SAVE_DIR, exist_ok=True)
 
-if args.dataset == 'cifar10' or 'stl10':
+if DATA_SET == 'cifar10' or DATA_SET == 'stl10':
     CHANNEL_SIZE = 3
 
 netD = DiscriminatorDCGAN(CHANNEL_SIZE, NDF)
@@ -53,8 +54,6 @@ if GAN_TYPE == 'gan':
     netD = DiscriminatorGAN(64 * 64 * CHANNEL_SIZE, 1)
     netG = GeneratorGAN(100, 64 * 64 * CHANNEL_SIZE, nc=CHANNEL_SIZE)
     criterion = nn.BCELoss()
-    # print(netG)
-    # print(netD)
 
 print('BATCH SIZE:', BATCH_SIZE)
 print('EPOCHS:', MAX_EPOCH)
