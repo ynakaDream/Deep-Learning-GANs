@@ -25,7 +25,7 @@ python3 main.py -b 100 -e 20 -gt gan -d cifar10
 ```
 - -b: batch size
 - -e: number of epochs
-- -gt: gan type (gan or gcgan)
+- -gt: gan type (gan or dcgan)
 - -d: dataset (mnist, cifar10 and stl10)
 
 ## References
