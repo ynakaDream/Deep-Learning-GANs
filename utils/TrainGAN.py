@@ -66,7 +66,9 @@ class TrainGAN:
         :return: errD, D_x, D_G_z1
         '''
         real_img = real_img.to(self.device)
+
         noise = torch.randn(self.batch_size, 100, 1, 1, device=self.device)
+
         self.netD.zero_grad()
         output = self.netD(real_img)
         errD_real = self.criterion(output, self.real_target)
@@ -100,6 +102,6 @@ class TrainGAN:
 
         return errG, D_G_z2
 
-    def outimg(self):
+    def output_images(self):
         fake_image = self.netG(self.fixed_noise)
         return fake_image
